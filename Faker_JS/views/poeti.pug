@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 List of Poets
+  ul
+    each p in poetiVettore
+      li.lista
+        .card
+          .container
+            h4
+              a(href=`/poeti/nomePoeta/${p.email}`) #{p.name}
+            p #{p.email} &amp; #{p.card.website}
+
+        
