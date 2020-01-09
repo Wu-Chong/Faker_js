@@ -3,6 +3,10 @@ var router = express.Router();
 var vettore_file = require ('../people.json')
 /* GET home page. */
 
+router.get('/api', function(req, res, next) {
+    console.log(vettore_file.persone);
+  res.send(vettore_file.persone);
+});
 
 router.get('/', function(req, res, next) {
     console.log(vettore_file.persone);
